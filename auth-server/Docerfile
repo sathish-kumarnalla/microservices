@@ -1,0 +1,7 @@
+FROM eclipse-temurin:21-jdk
+WORKDIR /app
+COPY target/auth-server-0.0.1-SNAPSHOT.jar app.jar
+EXPOSE 9090
+ENTRYPOINT ["java", "-jar", "app.jar"]
+HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
+  CMD curl -f http://localhost:9090/actuator/health || exit 1

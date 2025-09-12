@@ -1,0 +1,62 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: user-profile-service
+  config:
+    import:
+      - optional:configserver:
+      - optional:consul:
+  datasource:
+    url: jdbc:h2:mem:userdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: sa
+
+jpa:
+  database-platform: org.hibernate.dialect.H2Dialect
+
+hibernate:
+  ddl-auto: update
+  show-sql: true
+
+h2:
+  console:
+    enabled: true
+    path: /h2-console
+
+security:
+  oauth2:
+    resource-server:
+      jwt:
+        issuer-uri: http://localhost:9090
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      userServiceCB:
+        slidingWindowSize: 10
+        failureRateThreshold: 20
+        waitDurationInOpenState: 10s
+        permittedCallsInHalfOpenState: 3
+      tenantServiceCB:
+        slidingWindowSize: 10
+        failureRateThreshold: 20
+        waitDurationInOpenState: 10s
+        permittedCallsInHalfOpenState: 3
+
+kafka:
+  bootstrap-servers: localhost:9092
+  consumer:
+    group-id: test-group
+    key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    value-deserializer: org.apache.kafka.common.serialization.ByteArrayDeserializer
+  producer:
+    key-serializer: org.apache.kafka.common.serialization.StringSerializer
+    value-serializer: org.apache.kafka.common.serialization.ByteArraySerializer
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.springframework.security.oauth2: DEBUG

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/client-app/client-app.iml" filepath="$PROJECT_DIR$/client-app/client-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/client-app/src/main/main1.iml" filepath="$PROJECT_DIR$/client-app/src/main/main1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-profile-service/src/main/main2.iml" filepath="$PROJECT_DIR$/user-profile-service/src/main/main2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/auth-server/src/main/main3.iml" filepath="$PROJECT_DIR$/auth-server/src/main/main3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservices-parent.iml" filepath="$PROJECT_DIR$/microservices-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/order-management-service/src/test/test.iml" filepath="$PROJECT_DIR$/order-management-service/src/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-profile-service/src/test/test1.iml" filepath="$PROJECT_DIR$/user-profile-service/src/test/test1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/client-app/src/test/test2.iml" filepath="$PROJECT_DIR$/client-app/src/test/test2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/auth-server/src/test/test3.iml" filepath="$PROJECT_DIR$/auth-server/src/test/test3.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,22 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: dashboard-service
+
+security:
+  oauth2:
+    resource-server:
+      jwt:
+        issuer-uri: http://localhost:9090
+kafka:
+  bootstrap-servers: localhost:9092
+  consumer:
+    group-id: microservice-group
+    auto-offset-reset: earlier
+    key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    value-deserializer: org.apache.kafka.common.serialization.StringSerializer
+  producer:
+    key-serializer: org.apache.kafka.common.serialization.StringSerializer
+    value-serializer: org.apache.kafka.common. serialization.StringSerializer

@@ -1,0 +1,38 @@
+{
+  "type": "record",
+  "name": "UserCreatedEvent",
+  "namespace": "com.techie.event.model.events",
+  "fields": [
+    {
+      "name": "eventId",
+      "type": "string",
+      "doc": "Unique identifier for the event"
+    },
+    {
+      "name": "eventType",
+      "type": "string",
+      "doc": "Type of the event (e.g., USER_CREATED)"
+    },
+    {
+      "name": "timestamp",
+      "type": "long",
+      "logicalType": "timestamp-millis",
+      "doc": "Event timestamp in milliseconds since epoch"
+    },
+    {
+      "name": "userId",
+      "type": "string",
+      "doc": "ID of the user who was created"
+    },
+    {
+      "name": "email",
+      "type": "string",
+      "doc": "Email address of the user"
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "doc": "Full name of the user"
+    }
+  ]
+}
