@@ -1,0 +1,35 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: gateway-service
+
+  cloud:
+    config:
+      enabled: false
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        register: false
+        service-name: gateway-service
+
+  security:
+    oauth2:
+      resource-server:
+        jwt:
+          issuer-uri: http://localhost:9090  # OAuth2 Authorization Server
+
+  gateway:
+    routes:
+      - id: user-profile-service
+        uri: lb://USER-PROFILE-SERVICE
+        predicates:
+          - Path=/users/**
+        filters:
+          - StripPrefix=1
+          - name: CircuitBreaker
+            args:
+              name: userProfileServiceCB
+              fallbackUri: forward:/fallback/users
