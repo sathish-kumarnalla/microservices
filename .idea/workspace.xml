@@ -7,17 +7,28 @@
     <loaded-modules>
       <module name="dashboard-service" />
       <module name="tenant-service" />
-      <module name="config-server" />
       <module name="microservices-parent" />
       <module name="gateway-service" />
       <module name="auth-server" />
       <module name="event-model" />
       <module name="user-profile-service" />
+      <module name="config-repo" />
     </loaded-modules>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3780589a-a02e-4766-a5b6-fd04f1c7a05c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/java/com/techie/config/server/ConfigServerApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/test/java/com/techie/config/server/ConfigServerApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +46,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/config-repo" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -55,41 +66,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.AuthServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ClientAppApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.CommonUtilApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.PasswordHashes.executor&quot;: &quot;Run&quot;,
-    &quot;Application.UserProfileServiceApplication (1).executor&quot;: &quot;Run&quot;,
-    &quot;Application.UserProfileServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Unknown [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.auth-server [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.auth-server [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.auth-server [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.auth-server [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.auth-server [verify].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.eureka-server [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.eureka-server [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.eureka-server [test].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.microservices-parent [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.microservices-parent [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.user-profile-service [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.user-profile-service [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.user-profile-service [install].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;21&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/sathinal/Desktop/microservices/tenant-service/src/test&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.30229884&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.AuthServerApplication.executor": "Run",
+    "Application.ClientAppApplication.executor": "Run",
+    "Application.CommonUtilApplication.executor": "Run",
+    "Application.PasswordHashes.executor": "Run",
+    "Application.UserProfileServiceApplication (1).executor": "Run",
+    "Application.UserProfileServiceApplication.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "Maven.Unknown [clean].executor": "Run",
+    "Maven.auth-server [clean].executor": "Run",
+    "Maven.auth-server [compile].executor": "Run",
+    "Maven.auth-server [install].executor": "Run",
+    "Maven.auth-server [package].executor": "Run",
+    "Maven.auth-server [verify].executor": "Run",
+    "Maven.eureka-server [clean].executor": "Run",
+    "Maven.eureka-server [compile].executor": "Run",
+    "Maven.eureka-server [test].executor": "Run",
+    "Maven.microservices-parent [clean].executor": "Run",
+    "Maven.microservices-parent [install].executor": "Run",
+    "Maven.user-profile-service [clean].executor": "Run",
+    "Maven.user-profile-service [compile].executor": "Run",
+    "Maven.user-profile-service [install].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "<unknown>",
+    "jdk.selected.JAVA_MODULE": "21",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/sathinal/Desktop/microservices/config-repo",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.30229884",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\sathinal\Desktop\microservices\tenant-service\src\test" />
@@ -99,11 +110,11 @@
       <recent name="C:\Users\sathinal\Desktop\microservices\auth-server\src\main\java\com\techie\auth\server\dto" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sathinal\Desktop\microservices\config-repo" />
       <recent name="C:\Users\sathinal\Desktop\microservices\event-model\src\main\avro" />
       <recent name="C:\Users\sathinal\Desktop\microservices\my-oauth-app\src\auth" />
       <recent name="C:\Users\sathinal\Desktop\microservices\my-oauth-app\src\routes" />
       <recent name="C:\Users\sathinal\Desktop\microservices\my-oauth-app\src\hooks" />
-      <recent name="C:\Users\sathinal\Desktop\microservices\my-oauth-app\src\pages" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.techie.gateway.exception" />

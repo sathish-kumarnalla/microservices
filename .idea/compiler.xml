@@ -7,7 +7,6 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="config-server" />
         <module name="gateway-service" />
       </profile>
       <profile name="Annotation profile for auth-server" enabled="true">
@@ -44,12 +43,22 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
         </processorPath>
         <module name="tenant-service" />
+      </profile>
+      <profile name="Annotation profile for dashboard-service" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
+        </processorPath>
         <module name="dashboard-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="client-app" target="21" />
       <module name="common-security-starter" target="21" />
+      <module name="config-server" target="21" />
       <module name="eureka-server" target="21" />
       <module name="event-model (1)" target="21" />
       <module name="order-management-service" target="21" />
