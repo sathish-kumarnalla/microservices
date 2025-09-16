@@ -6,20 +6,34 @@ spring:
     name: user-profile-service
   config:
     import:
-      - optional:configserver:
-      - optional:consul:
+      - "optional:configserver:"
+      - "optional:consul:"
+  cloud:
+    config:
+      enabled: true
+    import-check:
+      enabled: true
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        register: true
+        serviceName: ${spring.application.name}
+        health-check-path: /actuator/health
+        health-check-interval: 10s
   datasource:
     url: jdbc:h2:mem:userdb
     driver-class-name: org.h2.Driver
     username: sa
     password: sa
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
 
-jpa:
-  database-platform: org.hibernate.dialect.H2Dialect
-
-hibernate:
-  ddl-auto: update
-  show-sql: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
 
 h2:
   console:
